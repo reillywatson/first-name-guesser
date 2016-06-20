@@ -1,1 +1,1 @@
-web: guesser
+web: first-name-guesser
