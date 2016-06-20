@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/reillywatson/firstname-guesser"
+	"github.com/reillywatson/first-name-guesser"
 	"log"
 	"net/http"
 )
