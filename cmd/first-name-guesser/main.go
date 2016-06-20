@@ -5,6 +5,7 @@ import (
 	"github.com/reillywatson/first-name-guesser"
 	"log"
 	"net/http"
+	"os"
 )
 
 func nameHandler(w http.ResponseWriter, r *http.Request) {
@@ -18,7 +19,10 @@ func main() {
 	fs := http.FileServer(http.Dir("static"))
 	http.Handle("/", fs)
 	http.HandleFunc("/name", nameHandler)
-	port := 8080
+	port := os.Getenv("PORT")
+	if port == 0 {
+		port = 8080
+	}
 	log.Printf("Listening on port %d\n", port)
 	http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
 }
