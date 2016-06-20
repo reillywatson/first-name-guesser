@@ -1,6 +1,6 @@
 {
 	"ImportPath": "github.com/reillywatson/first-name-guesser",
-	"GoVersion": "1.6",
+	"GoVersion": "go1.6",
 	"GodepVersion": "v60",
 	"Deps": []
 }
