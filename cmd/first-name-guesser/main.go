@@ -20,9 +20,9 @@ func main() {
 	http.Handle("/", fs)
 	http.HandleFunc("/name", nameHandler)
 	port := os.Getenv("PORT")
-	if port == 0 {
-		port = 8080
+	if port == "" {
+		port = "8080"
 	}
-	log.Printf("Listening on port %d\n", port)
-	http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
+	log.Printf("Listening on port %s\n", port)
+	http.ListenAndServe(fmt.Sprintf(":%s", port), nil)
 }
