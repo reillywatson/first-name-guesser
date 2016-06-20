@@ -2,7 +2,6 @@ package guesser
 
 import (
 	"strings"
-	"unicode"
 )
 
 func GuessFirstName(name string) string {
